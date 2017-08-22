@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -37,3 +38,6 @@ int main(){
 		cout<<endl;
 	}
 }
+=======
+
+>>>>>>> b6aeb91a93b86ca0f68a83423c767754c85f0db5

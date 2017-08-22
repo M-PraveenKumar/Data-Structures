@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <iostream>
 using namespace std;
 class XO
@@ -59,3 +60,6 @@ int main(){
 	XO xo;
 	xo.work();
 }
+=======
+
+>>>>>>> b6aeb91a93b86ca0f68a83423c767754c85f0db5
