@@ -41,8 +41,8 @@ public:
 			{	
 				if (pre(exp[i])<=pre(st.top))
 					cout<<"st.push  "<<st.push(exp[i])<<endl;
-				else
-					{cout<<"out.push2  "<<out.push(st.pop())<<endl;}
+				else while(pre(exp[i])>pre(st.top))
+					cout<<"out.push2  "<<out.push(st.pop())<<endl;
 			}
 		}
 	}
