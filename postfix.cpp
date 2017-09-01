@@ -4,13 +4,14 @@ using namespace std;
 class stack
 {
 public:
-	int top, a[15];
+	int top;
+	char a[15];
 	stack(){ top=-1;}
-	void push(int x){a[top]=x;  top++;}
-	int pop(){top--; return a[top+1];}
-	void display(){for (int i=top; i>0; i--) cout<<a[i]<<" ";}
+	char push(char x){a[++top]=x; return a[top];}
+	char pop(){ return a[top--]; }
+	void display(){ for (int i=0; i<=top; i++) cout<<a[i]<<" ";}
 };
-
+//1234/*5-+
 class postfix
 {
 	char exp[15];
@@ -35,20 +36,19 @@ public:
 		for (int i = 0; i < n; i++)
 		{
 			if(exp[i]>'0' && exp[i]<'9')	
-				out.push(exp[i]);
+				cout<<"out.push  "<<out.push(exp[i])<<endl;
 			else
-			{
-				if (pre(exp[i])>pre(st.top) )
-					st.push(exp[i]);
-				else{
-					while(pre(exp[i])>pre(st.top))
-						out.push(st.pop());
-				}
+			{	
+				if (pre(exp[i])<=pre(st.top))
+					cout<<"st.push  "<<st.push(exp[i])<<endl;
+				else
+					{cout<<"out.push2  "<<out.push(st.pop())<<endl;}
 			}
 		}
 	}
 
 	void display(){
+		st.display(); cout<<"\n";
 		out.display();
 	}
 };
