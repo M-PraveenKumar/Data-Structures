@@ -64,7 +64,7 @@ int count;
 
 	}
 	void display(){
-		temp=head;
+		temp=head; cout<<"\n";
 		while(temp->next){
 			cout<<temp->coeff<<"x^"<<temp->exp<<" + ";
 			temp=temp->next;

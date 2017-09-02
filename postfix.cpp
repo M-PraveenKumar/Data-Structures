@@ -12,7 +12,7 @@ public:
 	void display(){ for (int i=0; i<=top; i++) cout<<a[i]<<" ";}
 };
 //1234/*5-+
-class postfix
+class postfix: public stack
 {
 	char exp[15];
 	stack st, out;
@@ -29,7 +29,7 @@ public:
 
 	postfix(){
 		cout<<"enter no. of operands & infix exp : "; cin>>n;
-		for (int i = 0; i < 2*n-1; i++)  cin>>exp[i];
+		  cin>>exp;
 	}
 	
 	void convert(){
