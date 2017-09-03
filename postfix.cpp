@@ -11,7 +11,7 @@ public:
 	char pop(){ return a[top--]; }
 	void display(){ for (int i=0; i<=top; i++) cout<<a[i]<<" ";}
 };
-//1234/*5-+
+//1+2*3/4 == 1234/*+
 class postfix: public stack
 {
 	char exp[15];
@@ -24,7 +24,7 @@ public:
 			case '-': return 1;
 			case '*': 
 			case '/': return 2;
-			default : return 0;
+			default : if (st.top==-1) return 0;
 		}
 	}
 
@@ -42,7 +42,7 @@ public:
 			{	
 				if (pre(exp[i])>pre(st.a[top]))
 					cout<<"st.push  "<<st.push(exp[i])<<endl;
-				while(pre(exp[i])<=pre(st.a[top]))
+				else while(pre(exp[i])<=pre(st.a[top]))
 					cout<<"out.push2  "<<out.push(st.pop())<<endl;
 			}
 		}
