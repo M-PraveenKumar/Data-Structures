@@ -46,6 +46,8 @@ public:
 					cout<<"out.push2  "<<out.push(st.pop())<<endl;
 			}
 		}
+		while(st.top>0)
+			cout<<"out.pushF  "<<out.push(st.pop());
 	}
 
 	void display(){
