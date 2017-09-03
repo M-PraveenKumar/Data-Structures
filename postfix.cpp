@@ -24,6 +24,7 @@ public:
 			case '-': return 1;
 			case '*': 
 			case '/': return 2;
+			default : return 0;
 		}
 	}
 
@@ -39,9 +40,9 @@ public:
 				cout<<"out.push  "<<out.push(exp[i])<<endl;
 			else
 			{	
-				if (pre(exp[i])<=pre(st.top))
+				if (pre(exp[i])>pre(st.a[top]))
 					cout<<"st.push  "<<st.push(exp[i])<<endl;
-				else while(pre(exp[i])>pre(st.top))
+				while(pre(exp[i])<=pre(st.a[top]))
 					cout<<"out.push2  "<<out.push(st.pop())<<endl;
 			}
 		}
