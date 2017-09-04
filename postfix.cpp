@@ -48,8 +48,8 @@ public:
 				//while(pre(exp[i])<=pre(st.a[top]))
 			}
 		}
-		while(st.top>=0)
-			cout<<"out.pushF  "<<out.push(st.pop());
+		while(st.top>0)
+			out.push(st.pop());
 	}
 
 	void display(){
