@@ -24,7 +24,7 @@ public:
 			case '-': return 1;
 			case '*': 
 			case '/': return 2;
-			default : if (st.top==-1) return 0;
+			default : return 0;
 		}
 	}
 //n should be no. of operands+operators
