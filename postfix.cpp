@@ -6,7 +6,8 @@ class stack
 public:
 	int top;
 	char a[15];
-	stack(){ top=-1;}
+	stack(){ top=-1;
+	       push('#');}
 	char push(char x){a[++top]=x; return a[top];}
 	char pop(){ return a[top--]; }
 	void display(){ for (int i=0; i<=top; i++) cout<<a[i]<<" ";}
@@ -42,7 +43,7 @@ public:
 			{	
 				if (pre(exp[i])>pre(st.a[top]))
 					cout<<"st.push  "<<st.push(exp[i])<<endl;
-				else if(pre(exp[i]<=pre(st.a[top])
+				else if(pre(exp[i])<=pre(st.a[top]))
 					cout<<"out.push  "<<out.push(st.pop())<<endl;
 				//while(pre(exp[i])<=pre(st.a[top]))
 			}
