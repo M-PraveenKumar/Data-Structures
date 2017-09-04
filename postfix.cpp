@@ -27,7 +27,7 @@ public:
 			default : if (st.top==-1) return 0;
 		}
 	}
-
+//n should be no. of operands+operators
 	postfix(){
 		cout<<"enter no. of operands & infix exp : "; cin>>n;
 		  cin>>exp;
@@ -42,8 +42,9 @@ public:
 			{	
 				if (pre(exp[i])>pre(st.a[top]))
 					cout<<"st.push  "<<st.push(exp[i])<<endl;
-				else while(pre(exp[i])<=pre(st.a[top]))
-					cout<<"out.push2  "<<out.push(st.pop())<<endl;
+				else if(pre(exp[i]<=pre(st.a[top])
+					cout<<"out.push  "<<out.push(st.pop())<<endl;
+				//while(pre(exp[i])<=pre(st.a[top]))
 			}
 		}
 		while(st.top>=0)
